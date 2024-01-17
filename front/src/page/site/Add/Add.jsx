@@ -22,7 +22,7 @@ const Add = () => {
       }
 
 
-      axios.post('http://localhost:3000/datas', { ...values })
+      axios.post('https://backend-aytaj.onrender.com/datas', { ...values })
         .then(res => {
           console.log(res);
           toast.success('Product added successfully!');
@@ -39,7 +39,7 @@ const Add = () => {
   });
 
   useEffect(()=>{
-    axios.get("http://localhost:3000/datas")
+    axios.get("https://backend-aytaj.onrender.com/datas")
     .then(res=>{
       setData(res.data);
       console.log(res.data)
@@ -50,7 +50,7 @@ const Add = () => {
   },[])
 
   const deleteHandler = (id) => {
-    axios.delete(`http://localhost:3000/datas/${id}`)
+    axios.delete(`https://backend-aytaj.onrender.com/datas/${id}`)
       .then(() => {
         const updatedData = data.filter(product => product._id !== id);
         setData(updatedData);
