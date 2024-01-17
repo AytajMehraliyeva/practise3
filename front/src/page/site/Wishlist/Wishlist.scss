@@ -1,0 +1,38 @@
+.cardsWishlist {
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    border: 1px solid black;
+    text-align: center;
+    .deleteWishlist {
+        background-color: rgb(176, 3, 32);
+        border: none;
+        padding: 10px 5px;
+        width: 90px;
+        color: white;
+        border-radius: 5px;
+    }
+    .wishlistCard {
+        width: 20%;
+        margin: auto;
+        height: 400px;
+        text-align: center;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid black;
+        img {
+            height: 200px;
+            width: 100%;
+        }
+        .cardBody {
+            padding: 10px;
+            p {
+                padding: 10px;
+                font-size: 20px;
+            }
+        }
+    }
+}
