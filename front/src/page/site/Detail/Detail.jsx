@@ -7,7 +7,7 @@ const Detail = () => {
     const [item, setItem] = useState({})
     const { id } = useParams()
     useEffect(() => {
-        axios.get(`http://localhost:3000/datas/${id}`).then(res => {
+        axios.get(`https://backend-aytaj.onrender.com/datas/${id}`).then(res => {
             setItem(res.data)
         })
     }, [id])
