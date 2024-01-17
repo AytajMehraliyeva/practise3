@@ -9,7 +9,7 @@ const Card = () => {
     const{data,setData,setError,addToWishlist, searchItems}=useContext(MainContext)
 
     useEffect(()=>{
-        axios.get("http://localhost:3000/datas")
+        axios.get("https://backend-aytaj.onrender.com/datas")
         .then(res=>{
             setData(res.data)
             console.log(res.data)
