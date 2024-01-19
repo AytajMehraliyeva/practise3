@@ -1,13 +1,12 @@
-import React, { useContext } from 'react'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Home.scss'
 import Card from '../../../Companent/Card';
 import {Helmet} from 'react-helmet'
-import MainContext from '../../../context';
+
 const Home = () => {
-const{search,setSearch}=useContext(MainContext)
+
     const settings = {
         dots: true,
         speed: 500,
@@ -75,12 +74,7 @@ const{search,setSearch}=useContext(MainContext)
   </section>
 
  <section className='crud'>
- <input
-        type="text"
-        value={search}
-        placeholder='Search product'
-        onChange={(e) => setSearch(e.target.value)}
-      />
+
   <Card/>
  </section>
 

@@ -6,7 +6,7 @@ import { Toaster } from 'react-hot-toast'
 import { Link } from 'react-router-dom'
 
 const Card = () => {
-    const{data,setData,setError,addToWishlist, searchItems}=useContext(MainContext)
+    const{data,setData,setError,addToWishlist}=useContext(MainContext)
 
     useEffect(()=>{
         axios.get("https://backend-aytaj.onrender.com/datas")
@@ -19,7 +19,7 @@ const Card = () => {
     },[])
   return (
     <div className='cards'>
-        {searchItems.map((item,index)=>(
+        {data.map((item,index)=>(
             <div className='card' key={index}>
                 <img src={item.img} alt="" />
                 <div className='cardBody'>
